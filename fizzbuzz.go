@@ -11,16 +11,18 @@ var (
 
 // Convert FizzBuzzのルールに合わせて値を変換する
 func Convert(i int) (string, error) {
-	// 3と5の最小公倍数
-	if 0 == (i % 15) {
+	a := (i % 3) == 0
+	b := (i % 5) == 0
+
+	if a && b {
 		return fizz + " " + buzz, nil
 	}
 
-	if 0 == (i % 3) {
+	if a {
 		return fizz, nil
 	}
 
-	if 0 == (i % 5) {
+	if b {
 		return buzz, nil
 	}
 
