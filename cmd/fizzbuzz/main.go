@@ -6,7 +6,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/nakmo/fizzbuzz"
+	"github.com/nkmth/fizzbuzz"
 )
 
 func main() {

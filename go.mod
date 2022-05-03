@@ -1,4 +1,4 @@
-module github.com/nakmo/fizzbuzz
+module github.com/nkmth/fizzbuzz
 
 go 1.14
 
