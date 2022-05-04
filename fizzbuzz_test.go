@@ -50,4 +50,14 @@ func TestConvert(t *testing.T) {
 		ret, _ = Convert(num)
 		assert.Equal(t, expect, ret)
 	})
+
+	t.Run("自然数以外の整数を指定された時", func(t *testing.T) {
+		num := 0
+		_, err := Convert(num)
+		assert.Error(t, err)
+
+		num = -1
+		_, err = Convert(num)
+		assert.Error(t, err)
+	})
 }

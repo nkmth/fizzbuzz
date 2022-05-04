@@ -1,6 +1,7 @@
 package fizzbuzz
 
 import (
+	"errors"
 	"strconv"
 )
 
@@ -11,6 +12,10 @@ var (
 
 // Convert FizzBuzzのルールに合わせて値を変換する
 func Convert(i int) (string, error) {
+	if i <= 0 {
+		return strconv.Itoa(i), errors.New("argument is only natural number")
+	}
+
 	a := (i % 3) == 0
 	b := (i % 5) == 0
 
